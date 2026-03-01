@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# R
+.RData
+.Rhistory
+.Rproj.user/
+*.Rproj
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# System / temp
+*.tmp
+*.swp
+
+#Data
+Plot/
