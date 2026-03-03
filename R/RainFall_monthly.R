@@ -9,12 +9,12 @@ suppressWarnings({
   if (!requireNamespace("zoo", quietly = TRUE)) install.packages("zoo")
 })
 library(zoo)  # mean of 10 years
-
+library(here)
 
 # The Dir of Data_set
 data_dir <- "../Data_Set/RainFall"
 # The Dir of wd
-setwd("/Users/bill/Documents/NCKU/大二/R語言&黑客松/GlobalWarming/R")
+setwd(here("R"))
 
 files <- list.files(data_dir, pattern = "^ObsRain_.*\\.csv$", full.names = TRUE)
 
@@ -84,5 +84,4 @@ p1 <- ggplot(taiwan_monthly_grid_eq, aes(x = date)) +
        x = "時間", y = "降雨（原始單位）") +
   theme_minimal(base_size = 12)
 print(p1)
-
 

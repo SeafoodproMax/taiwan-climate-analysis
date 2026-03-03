@@ -4,9 +4,10 @@ library(dplyr)
 library(readr)
 library(lubridate)
 library(ggplot2)
+library(here)
 
 # === Working Dir ===
-setwd("/Users/bill/Documents/NCKU/大二/R語言&黑客松/GlobalWarming")
+setwd(here())
 
 # === Raw Data Dir ===
 tw_extreme_rainfalldata_dir <- "Data_Set/tw_extreme_indices.csv"
@@ -153,7 +154,6 @@ p_scatter <- ggplot(df_join, aes(x = Temp_Annual, y = RainVar)) +
        y = "Days ≥200mm") +
   theme_minimal(base_size = 12)
 print(p_scatter)
-
 
 
 

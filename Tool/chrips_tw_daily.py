@@ -7,6 +7,7 @@ pip install requests tqdm xarray rioxarray pandas numpy
 import os
 import time
 from enum import Enum
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import requests
@@ -14,7 +15,8 @@ import xarray as xr
 from tqdm import tqdm
 
 # Set Working Directory
-os.chdir("/Users/bill/Documents/NCKU/大二/R語言&黑客松/GlobalWarming")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+os.chdir(PROJECT_ROOT)
 
 # ========== Download Settings ==========
 BASE_URL = "https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p05"

@@ -2,9 +2,10 @@
 library(ncdf4)
 library(zoo)
 library(ggplot2)
+library(here)
 
 # --- PATH ---
-setwd("/Users/bill/Documents/NCKU/大二/R語言&黑客松/GlobalWarming")
+setwd(here())
 
 # --- Read NetCDF ---
 nc <- nc_open("Data_Set/gistemp1200_GHCNv4_ERSSTv5.nc")
@@ -57,4 +58,3 @@ p <- ggplot(df, aes(Date)) +
   ) +
   theme_minimal()
 print(p)
-
